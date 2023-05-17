@@ -2,7 +2,7 @@
 
 using namespace ariel;
 
-Character::Character(string name, Point *location) {
+Character::Character(string name, Point location) {
     this->name = name;
     this->location = location;
 }
@@ -12,10 +12,10 @@ bool Character::isAlive() {
 }
 
 double Character::distance(const Character *other) {
-    return this->location->distance(*other->location);
+    return this->location.distance(other->location);
 }
 
-void Character::hit(int hits) {
+void Character::hit(int hits)  {
     this->hitPoints -= hits;
 }
 
@@ -24,7 +24,11 @@ string Character::getName() {
 }
 
 Point Character::getLocation() {
-    return *this->location;
+    return this->location;
+}
+
+int Character::getHitPoints() {
+    return this->hitPoints;
 }
 
 void Character::setHitPoints(int hits) {

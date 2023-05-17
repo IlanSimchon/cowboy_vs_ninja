@@ -2,7 +2,7 @@
 
 using namespace ariel;
 
-Cowboy::Cowboy(string name, Point *location) :Character(name , location){
+Cowboy::Cowboy(string name, Point location) :Character(name , location){
     this->setHitPoints(110);
     this->numOfBullets = 6;
 }

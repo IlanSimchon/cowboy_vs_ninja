@@ -2,7 +2,7 @@
 
 using namespace ariel;
 
-Ninja::Ninja(string name, Point *location) : Character(name , location){}
+Ninja::Ninja(string name, Point location) : Character(name , location){}
 
 void Ninja::slash(Character *enemy) {
     if(this->distance(enemy) < 1)
@@ -19,4 +19,5 @@ void Ninja::move(ariel::Character *enemy) {
 
 string Ninja::print() {
 
+    return "aaa";
 }

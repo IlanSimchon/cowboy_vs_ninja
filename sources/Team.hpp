@@ -14,12 +14,19 @@ namespace ariel{
         Character *leader;
     public:
         Team(Character *leader);
-        ~Team();
+        Team(const Team& other);
+        Team(Team&& other) noexcept;
+
+        virtual ~Team();
         virtual void add(Character* New);
         virtual void attack(Team  *enemy);
         int stillAlive();
         virtual void print();
         vector<Character*> getCharacters();
+
+
+        Team& operator=(const Team& other);
+        Team& operator=(Team&& other) noexcept;
     };
 
 }

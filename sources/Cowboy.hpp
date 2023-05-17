@@ -8,11 +8,11 @@ namespace ariel {
     private:
         int numOfBullets;
     public:
-        Cowboy(string name, Point *location);
+        Cowboy(string name, Point location);
         void shoot(Character *enemy);
         bool hashBullets();
         void reload();
-        virtual string print();
+        string print() override;
 
     };
 }

@@ -241,7 +241,7 @@ TEST_CASE("Team test"){
 
 
     CHECK_THROWS_AS(Team2 team3(&trained2) , invalid_argument);
-    CHECK_THROWS_AS(smartTeam team4(&trained3) , invalid_argument);
+    CHECK_THROWS_AS(SmartTeam team4(&trained3) , invalid_argument);
 
     Cowboy cowboy5("1" , Point(9.9,8.3));
     Cowboy cowboy6("2" , Point(12.4,65.3));

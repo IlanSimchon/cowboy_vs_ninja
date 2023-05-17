@@ -5,7 +5,7 @@
 namespace ariel{
     class YoungNinja:public Ninja{
     public:
-        YoungNinja(string name, Point *location);
+        YoungNinja(string name, Point location);
     };
 
 }

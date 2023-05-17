@@ -6,9 +6,12 @@ namespace ariel {
     class SmartTeam: public Team{
     public:
         SmartTeam(Character *leader);
-        virtual void add(Character* New);
-        virtual void attack(Team  *enemy);
-        virtual void print();
+
+        void add(Character* New) override;
+        void attack(Team  *enemy) override;
+        void print() override;
+
+
 
     };
 }

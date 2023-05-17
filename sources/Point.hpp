@@ -3,19 +3,20 @@
 namespace ariel {
     class Point {
     private:
-        double x__;
-        double y__;
+        double _x_;
+        double _y_;
 
     public:
-        Point(double x__, double y__);
-
+        Point(double _x_, double _y_);
+//      Point(const Point &other);
+        Point();
         double distance(Point other);
 
         static Point moveTowards(Point src, Point dst, int dist);
 
         void Print();
 
-        bool operator==(const Point other) const;
+        bool operator==(const Point& other) const;
 
     };
 }

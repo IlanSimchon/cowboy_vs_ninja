@@ -7,11 +7,11 @@ namespace ariel{
     private:
         int speed;
     public:
-        Ninja(string name, Point *location);
+        Ninja(string name, Point location);
         void move(Character *enemy);
         void slash(Character *enemy);
         void setSpeed(int speed);
-        virtual string print();
+        string print() override;
     };
 }
 

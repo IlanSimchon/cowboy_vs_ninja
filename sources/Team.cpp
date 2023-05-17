@@ -12,6 +12,10 @@ void Team::add(ariel::Character *New) {
 
 }
 
+void Team::attack(Team *enemy) {
+
+}
+
 int Team::stillAlive() {
     return -1;
 }

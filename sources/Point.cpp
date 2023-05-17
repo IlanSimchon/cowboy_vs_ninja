@@ -2,7 +2,13 @@
 
 using namespace ariel;
 
-Point::Point(double x__, double y__) : x__(x__), y__(y__){};
+Point::Point(double _x_, double _y_) : _x_(_x_), _y_(_y_){}
+
+//Point::Point(const Point &other) {
+//    this->x__ = other.x__;
+//    this->y__ = other.y__;
+//}
+Point::Point() :_x_(0) , _y_(0){}
 
 double Point::distance(ariel::Point other) {
     return 1.1;
@@ -16,6 +22,6 @@ void Point::Print() {
 
 }
 
-bool Point::operator==(const ariel::Point other) const {
-    return this->x__ == other.x__ && this->y__ == other.y__;
+bool Point::operator==(const Point& other) const {
+    return this->_x_ == other._x_ && this->_y_ == other._y_;
 }

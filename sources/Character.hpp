@@ -6,11 +6,17 @@ using namespace std;
 namespace ariel {
     class Character {
     private:
-        Point *location;
+        Point location;
         int hitPoints;
         string name;
     public:
-        Character(string name, Point *location);
+        Character(string name, Point location);
+
+        Character(const Character& other);
+        Character(Character&& other) noexcept;
+
+
+        virtual ~Character() = default;
 
         bool isAlive();
 
@@ -27,6 +33,10 @@ namespace ariel {
         int getHitPoints();
 
         void setHitPoints(int hits);
+
+
+        Character& operator=(const Character& other);
+        Character& operator=(Character&& other) noexcept;
 
     };
 }
