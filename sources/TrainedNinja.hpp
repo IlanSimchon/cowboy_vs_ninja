@@ -11,4 +11,4 @@ namespace ariel{
 
 }
 
-#endif //CPP_EX4_TRAINEDNINJA_HPP
+#endif

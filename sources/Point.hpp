@@ -1,5 +1,8 @@
 #ifndef CPP_EX4_POINT_HPP
 #define CPP_EX4_POINT_HPP
+#include <string>
+using namespace std;
+
 namespace ariel {
     class Point {
     private:
@@ -8,13 +11,13 @@ namespace ariel {
 
     public:
         Point(double _x_, double _y_);
-//      Point(const Point &other);
+
         Point();
         double distance(Point other);
 
-        static Point moveTowards(Point src, Point dst, int dist);
+        static Point moveTowards(Point src, Point dst, double dist);
 
-        void Print();
+        string Print();
 
         bool operator==(const Point& other) const;
 
@@ -23,4 +26,4 @@ namespace ariel {
 
 
 
-#endif //CPP_EX4_POINT_HPP
+#endif

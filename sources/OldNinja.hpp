@@ -1,7 +1,6 @@
 #ifndef CPP_EX4_OLDNINGA_HPP
 #define CPP_EX4_OLDNINGA_HPP
 
-
 #include "Ninga.hpp"
 
 namespace ariel{

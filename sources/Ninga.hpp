@@ -8,6 +8,7 @@ namespace ariel{
         int speed;
     public:
         Ninja(string name, Point location);
+        bool isCowboy() override;
         void move(Character *enemy);
         void slash(Character *enemy);
         void setSpeed(int speed);

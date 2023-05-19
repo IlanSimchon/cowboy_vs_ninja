@@ -9,8 +9,9 @@ namespace ariel {
         int numOfBullets;
     public:
         Cowboy(string name, Point location);
+        bool isCowboy() override;
         void shoot(Character *enemy);
-        bool hashBullets();
+        bool hasboolets();
         void reload();
         string print() override;
 
@@ -18,4 +19,4 @@ namespace ariel {
 }
 
 
-#endif //CPP_EX4_COWBOY_HPP
+#endif

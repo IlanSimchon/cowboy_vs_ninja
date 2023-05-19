@@ -9,4 +9,4 @@ namespace ariel{
     };
 
 }
-#endif //CPP_EX4_YOUNGNINJA_HPP
+#endif

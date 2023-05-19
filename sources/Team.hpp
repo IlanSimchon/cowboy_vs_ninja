@@ -3,10 +3,11 @@
 
 #include "Point.hpp"
 #include "Cowboy.hpp"
-#include "OldNinga.hpp"
+#include "OldNinja.hpp"
 #include "TrainedNinja.hpp"
 #include "YoungNinja.hpp"
 #include "vector"
+
 namespace ariel{
     class Team{
     private:
@@ -19,10 +20,12 @@ namespace ariel{
 
         virtual ~Team();
         virtual void add(Character* New);
-        virtual void attack(Team  *enemy);
+        void attack(Team  *enemy);
         int stillAlive();
-        virtual void print();
+        void print();
         vector<Character*> getCharacters();
+        void setCharacters(Character* New);
+        void updateLeader();
 
 
         Team& operator=(const Team& other);
@@ -30,4 +33,4 @@ namespace ariel{
     };
 
 }
-#endif //CPP_EX4_TEAM_HPP
+#endif
