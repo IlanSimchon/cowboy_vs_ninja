@@ -9,6 +9,7 @@ namespace ariel {
         SmartTeam(Character *leader);
 
         void add(Character* New) override;
+        void attack(Team  *enemy) override;
 
     };
 }

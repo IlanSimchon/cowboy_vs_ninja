@@ -57,5 +57,5 @@ bool Character::compare(Character* char1, Character* char2) {
 }
 
 bool Character::compare2(Character *char1, Character *char2) {
-    
+    return char1->getHitPoints() > 0 && char1->getHitPoints() < char2->getHitPoints();
 }

@@ -30,7 +30,6 @@ void Team::add(ariel::Character *New) {
     New->setIsPlay();
     this->Characters.push_back(New);
     sort(Characters.begin(), Characters.end() , &Character::compare);
-  //  sort(this->Characters , &Character::compare);
 
 }
 
@@ -40,13 +39,13 @@ void Team::attack(Team *enemy) {
     if(enemy->stillAlive() == 0)
         throw runtime_error("Attacking a dead team should throw an exception");
     updateLeader();
-    Character* poor = enemy->getCharacters().back();
-    for (Character* c: enemy->getCharacters()) {
+    Character* poor = (enemy->getCharacters())->back();
+    for (Character* c: *enemy->getCharacters()) {
         if (c->isAlive() && (!poor->isAlive() || c->distance(this->leader) < poor->distance(this->leader)))
             poor = c;
     }
 
-    for (Character *c: this->getCharacters()) {
+    for (Character *c: this->Characters) {
         if (c->isAlive() && poor->isAlive()) {
             if (Cowboy *c1 = dynamic_cast<Cowboy *>(c)) {
                 if (c1->hasboolets())
@@ -64,7 +63,7 @@ void Team::attack(Team *enemy) {
         if (this->stillAlive() == 0 || enemy->stillAlive() == 0)
             return;
         if (! poor->isAlive()) {
-            for (Character *s: enemy->getCharacters()) {
+            for (Character *s: *enemy->getCharacters()) {
                 if (s->isAlive() && (! poor->isAlive() || s->distance(this->leader) < poor->distance(this->leader)))
                     poor = s;
             }
@@ -89,8 +88,8 @@ void Team::print() {
 
 }
 
-vector<Character*> Team::getCharacters() {
-    return this->Characters;
+vector<Character*>* Team::getCharacters() {
+    return &this->Characters;
 }
 
 void Team::setCharacters(ariel::Character *New) {

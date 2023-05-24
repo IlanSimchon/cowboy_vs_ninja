@@ -20,10 +20,10 @@ namespace ariel{
 
         virtual ~Team();
         virtual void add(Character* New);
-        void attack(Team  *enemy);
+        virtual void attack(Team  *enemy);
         int stillAlive();
         void print();
-        vector<Character*> getCharacters();
+        vector<Character*>* getCharacters();
         void setCharacters(Character* New);
         void updateLeader();
 
